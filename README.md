@@ -1,2 +1,1 @@
-# minitienda
-Minitienda - Proyecto 2 de DAW
+# Minitienda - Proyecto 2 de DAW
