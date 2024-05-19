@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica para DAA</title>
+    <style>
+        body {
+            background-color: #FDF5E6;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .header img {
+            margin: 0 10px;
+        }
+        .header h1 {
+            font-size: 2em;
+        }
+        form {
+            text-align: center;
+            margin: 20px 0;
+        }
+        select, input[type="text"] {
+            margin: 5px;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        img {
+            width: 10%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <img src="images/corchea.png" alt="Imagen izquierda">
+    <h1>Musica para DAW</h1>
+    <img src="images/corchea.png" alt="Imagen derecha">
+</div>
+<hr>
+<div class="center">
+    <form action="Controlador" method="post" name="formulario">
+        <label for="cd"><strong>CD:</strong></label>
+        <select name="cd" id="cd">
+            <option>Yuan | The Guo Brothers | China | $14.95</option>
+            <option>Drums of Passion | Babatunde Olatunji | Nigeria | $16.95</option>
+            <option>Kaira | Tounami Diabate| Mali | $16.95</option>
+            <option>The Lion is Loose | Eliades Ochoa | Cuba | $13.95</option>
+            <option>Dance the Devil Away | Outback | Australia | $14.95</option>
+            <option>Record of Changes | Samulnori | Korea | $12.95</option>
+            <option>Djelika | Tounami Diabate | Mali | $14.95</option>
+            <option>Rapture | Nusrat Fateh Ali Khan | Pakistan | $12.95</option>
+            <option>Cesaria Evora | Cesaria Evora | Cape Verde | $16.95</option>
+            <option>DAA | GSTIC | Spain | $50.00</option>
+        </select>
+        <label for="cantidad"><strong>Cantidad:</strong></label>
+        <input type="number" name="cantidad" id="cantidad" value="1" min="1">
+        <br><br>
+            <input type="submit" value="Selecciona Producto">
+    </form>
+</div>
+<hr>
+</body>
+
+</html>
