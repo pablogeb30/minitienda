@@ -29,8 +29,8 @@ public class Controlador extends HttpServlet {
         AsistenteControlador helper_carrito = new AsistenteControlador();
 
         // Comprobamos si se ha seleccionado algun disco para eliminarlo del carrito
-        if(request.getParameter("posEliminar") != null){
-            String posDiscoString = request.getParameter("posEliminar");
+        if(request.getParameter("discoMarcado") != null){
+            String posDiscoString = request.getParameter("discoMarcado");
             int posDisco = Integer.parseInt(posDiscoString);
             helper_carrito.eliminar(request, posDisco);
             gotoPage("/vistaCarrito.jsp", request, response);
@@ -45,7 +45,6 @@ public class Controlador extends HttpServlet {
             // Si ya estaba en el carrito
             if(helper_carrito.contieneDisco(request, infoCd)){
                 helper_carrito.actualizarCantidadDisco(request, infoCd, cantidad);
-
             }
             // En caso contrario
             else{
@@ -63,25 +62,25 @@ public class Controlador extends HttpServlet {
         }
 
         // Comprobamos si se ha pulsado el boton de ir a la caja
-        else if(request.getParameter("go_caja") != null){
+        else if(request.getParameter("irCaja") != null){
             gotoPage("/vistaCaja.jsp", request, response);
         }
 
         // Comprobamos si se ha pulsado el boton de ir al inicio
-        else if(request.getParameter("go_index") != null){
+        else if(request.getParameter("inicio") != null){
             gotoPage("/index.html", request, response);
         }
 
         // Comprobamos si se ha pulsado el boton de realizar pedido
-        else if(request.getParameter("realizar_pedido") != null) {
+        else if(request.getParameter("confirmarPago") != null) {
             // Obtenemos los datos insertados
             String nombre = request.getParameter("nombre");
             String correo = request.getParameter("correo");
             String contrasenha = request.getParameter("contrasenha");
             String tipo = request.getParameter("tipo");
-            String tarjeta = request.getParameter("tarjeta");
+            String numero = request.getParameter("numero");
             // Insertamos el usuario en la base de datos
-            conBD.registrarUsuario(nombre, correo, contrasenha, tipo, tarjeta);
+            conBD.registrarUsuario(nombre, correo, contrasenha, tipo, numero);
             // Insertamos el pedido en la base de datos
             HttpSession session = request.getSession(true);
             Carrito carrito = helper_carrito.obtenerCarrito(session);

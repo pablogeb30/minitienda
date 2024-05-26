@@ -44,7 +44,6 @@ public class GestorBaseDatos {
             preparedStatement.close();
         } catch (SQLException e) {
             System.out.println("Error al registrar al usuario: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 

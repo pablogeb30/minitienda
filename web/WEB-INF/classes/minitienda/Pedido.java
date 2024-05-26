@@ -10,6 +10,10 @@ public class Pedido implements Serializable {
     private Integer id;
     private Float importeTotal;
 
+    // Constructor sin argumentos
+    public Pedido() {
+    }
+
     // Constructor
     public Pedido(Integer id, Float importeTotal) {
         this.id = id;

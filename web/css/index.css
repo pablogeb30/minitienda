@@ -1,0 +1,35 @@
+body {
+    background-color: #FDF5E6;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+img {
+    width: 10%;
+    height: auto;
+}
+
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+form select, form input[type="number"], form input[type="submit"] {
+    display: block;
+    margin: 10px auto;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.titulo img {
+    margin: 0 40px;
+}

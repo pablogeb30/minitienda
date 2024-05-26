@@ -7,7 +7,7 @@ CREATE TABLE Usuario (
     correo VARCHAR(50) NOT NULL,
     contrasenha VARCHAR(100) NOT NULL,
     tipoTarjeta VARCHAR(25) NOT NULL,
-    numeroTarjeta VARCHAR(16) NOT NULL
+    numeroTarjeta VARCHAR(16) NOT NULL,
     PRIMARY KEY (nombre)
 );
 
