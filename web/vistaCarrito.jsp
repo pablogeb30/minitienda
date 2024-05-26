@@ -45,8 +45,8 @@
                         <td>
                             <fmt:formatNumber value="${disco.precio * disco.cantidad}" type="number" minFractionDigits="2" maxFractionDigits="2"/></td>
                         <td>
-                            <label for="discoMarcado"></label>
-                            <input type="radio" name="discoMarcado" id="discoMarcado" value="${loop.index}" required>
+                            <label for="posDiscoMarcado"></label>
+                            <input type="radio" name="posDiscoMarcado" id="posDiscoMarcado" value="${loop.index}" required>
                         </td>
                     </tr>
                 </c:forEach>
@@ -55,8 +55,17 @@
                 <tr>
                     <td></td>
                     <td><b>IMPORTE TOTAL</b></td>
-                    <td>${carrito.importeTotal}</td>
-                    <td><input type="submit" value="Eliminar"></td>
+                    <td><fmt:formatNumber value="${carrito.importeTotal}" type="number" minFractionDigits="2" maxFractionDigits="2"/></td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${empty carrito.discos}">
+                                <input type="submit" value="Eliminar" disabled>
+                            </c:when>
+                            <c:otherwise>
+                                <input type="submit" value="Eliminar">
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
                 </tr>
             </table>
         </form>
@@ -65,14 +74,21 @@
         <div class="button-container">
             <!-- Comprar mas -->
             <img src="images/cd.png" alt="CD">
-            <form name="carrito" method="post" action="controlador">
+            <form name="comprarMas" method="post" action="controlador">
                 <input type="submit" name="inicio" value="Comprar mas">
             </form>
 
-            <!-- Pagar -->
+            <!-- Ir a la caja -->
             <img src="images/pagar.png" alt="Pagar">
-            <form name="carrito" method="post" action="controlador">
-                <input type="submit" name="irCaja" value="Ir a la caja">
+            <form name="irCaja" method="post" action="controlador">
+                <c:choose>
+                    <c:when test="${carrito.importeTotal == 0}">
+                        <input type="submit" name="irCaja" value="Ir a la caja" disabled>
+                    </c:when>
+                    <c:otherwise>
+                        <input type="submit" name="irCaja" value="Ir a la caja">
+                    </c:otherwise>
+                </c:choose>
             </form>
         </div>
     </body>

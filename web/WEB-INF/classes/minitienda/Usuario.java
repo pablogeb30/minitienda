@@ -13,10 +13,6 @@ public class Usuario implements Serializable {
     private String tipoTarjeta;
     private String numeroTarjeta;
 
-    // Constructor sin argumentos
-    public Usuario() {
-    }
-
     // Constructor
     public Usuario(String nombre, String correo) {
         this.nombre = nombre;

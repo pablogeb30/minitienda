@@ -1,7 +1,7 @@
 body {
     background-color: #FDF5E6;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: black;
 }
 
 img {
@@ -35,6 +35,7 @@ form td {
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
+form input[type="number"],
 form select {
     width: 100%;
     padding: 8px;
@@ -56,6 +57,14 @@ form input[type="submit"] {
 
 .titulo img {
     margin: 0 40px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 #confirmarPago {
