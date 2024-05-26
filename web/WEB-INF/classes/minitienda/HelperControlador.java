@@ -82,7 +82,7 @@ public class HelperControlador {
     }
 
     // Metodo auxiliar para obtener el carrito de la sesion
-    Carrito obtenerCarrito(HttpSession session) {
+    public Carrito obtenerCarrito(HttpSession session) {
         Carrito carrito = (Carrito)session.getAttribute("carrito");
         if (carrito == null) {
             session.setAttribute("carrito", new Carrito());

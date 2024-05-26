@@ -128,7 +128,7 @@ public class GestorBaseDatos {
     }
 
     // Metodo auxiliar para comprobar si el driver de PostgreSQL esta instalado
-    protected void testDriver() throws Exception {
+    private void testDriver() throws Exception {
         try {
             Class.forName("org.postgresql.Driver");
             System.out.println("Encontrado el driver de PostgreSQL.");
