@@ -1,0 +1,39 @@
+body {
+    background-color: #FDF5E6;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+    height: auto;
+}
+
+form input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.titulo img {
+    margin: 0 40px;
+}
+
+.info {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#CD {
+    width: 7%;
+    height: auto;
+}

@@ -7,6 +7,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
-        <url-pattern>/Controlador</url-pattern>
+        <url-pattern>/controlador</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 public class AsistenteControlador {
 
     // Metodo para insertar un disco en el carrito
-    public void insertarDisco(HttpServletRequest request,String info, float precio, int cantidad) {
+    public void insertarDisco(HttpServletRequest request, String info, float precio, int cantidad) {
         HttpSession session = request.getSession(true);
         Carrito carrito = obtenerCarrito(session);
         ArrayList<Disco> discos = carrito.getDiscos();
