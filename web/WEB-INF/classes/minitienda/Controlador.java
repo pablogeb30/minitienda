@@ -98,10 +98,10 @@ public class Controlador extends HttpServlet {
                 String numero = req.getParameter("numero");
 
                 // Registramos el usuario en la base de datos
-                int exito = gestorBD.registrarUsuario(nombre, correo, contrasenha, tipo, numero);
+                int filasInsertadas = gestorBD.registrarUsuario(nombre, correo, contrasenha, tipo, numero);
 
                 // Si no se registra correctamente, redirigimos a la vista de error
-                if (exito == 0) {
+                if (filasInsertadas == 0) {
                     session.setAttribute("nombre", nombre);
                     session.setAttribute("correo", correo);
                     gotoPage("/vistaError.jsp", req, resp);
